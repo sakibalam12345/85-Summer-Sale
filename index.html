@@ -181,7 +181,19 @@ font-family: 'Work Sans', sans-serif;
                 <p>Discount : <span id="discount-price">00</span> </p>
                 <p>Total : <span id="final-price">00</span> </p>
                 <hr>
-                <button id="purchase-btn" class="btn btn-secondary mt-5 px-16 " disabled >Make Purchase</button>
+                <!-- Open the modal using ID.showModal() method -->
+<button id="purchase-btn" class="btn btn-secondary mt-5 px-16" onclick="my_modal_1.showModal()" disabled>Make Purchase</button>
+<dialog id="my_modal_1" class="modal">
+  <form method="dialog" class="modal-box">
+    <img class=" px-40 " src="./images/congo.png" alt="">
+    <h3 class="font-bold text-5xl text-center">Congratulations</h3>
+    <p class="py-4 text-center">Your Purchase the product</p>
+    <div class="flex items-center justify-center">
+      <!-- if there is a button in form, it will close the modal -->
+      <button id="go-home-btn" class="btn btn-secondary items-center">Go Home</button>
+    </div>
+  </form>
+</dialog>
             </div>
         </section>
         

@@ -1,5 +1,5 @@
 
-function getCardbytid(cardid){
+function getCardbyid(cardid){
     const cardfield = document.getElementById(cardid);
     const cardinner = cardfield.innerText;
     const cardstringtonumber = parseFloat(cardinner)
@@ -37,3 +37,4 @@ function getinputvaluebyid(inputid){
     
      
 }
+

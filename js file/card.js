@@ -1,6 +1,6 @@
 // first card
 document.getElementById('first-card').addEventListener('click',function(){
-    const cardprice1 = getCardbytid('first-card-price');
+    const cardprice1 = getCardbyid('first-card-price');
   const previoustotalprice = gettotalprice('total-price');
 
   const newtotalprice = previoustotalprice + cardprice1;
@@ -23,7 +23,7 @@ if(newtotalprice >= 200){
 
 // 2nd card
 document.getElementById('second-card').addEventListener('click',function(){
-  const cardprice2 = getCardbytid('second-card-price');
+  const cardprice2 = getCardbyid('second-card-price');
   const previoustotalprice = gettotalprice('total-price');
 
   const newtotalprice = previoustotalprice + cardprice2;
@@ -43,7 +43,7 @@ document.getElementById('second-card').addEventListener('click',function(){
 })
 // 3rd-card
 document.getElementById('third-card').addEventListener('click',function(){
-    const cardprice3 = getCardbytid('third-card-price');
+    const cardprice3 = getCardbyid('third-card-price');
   const previoustotalprice = gettotalprice('total-price');
 
   const newtotalprice = previoustotalprice + cardprice3;
@@ -63,7 +63,7 @@ document.getElementById('third-card').addEventListener('click',function(){
 })
 // fourth-card
 document.getElementById('fourth-card').addEventListener('click',function(){
-    const cardprice4 = getCardbytid('fourth-card-price');
+    const cardprice4 = getCardbyid('fourth-card-price');
   const previoustotalprice = gettotalprice('total-price');
 
   const newtotalprice = previoustotalprice + cardprice4;
@@ -83,7 +83,7 @@ document.getElementById('fourth-card').addEventListener('click',function(){
 })
 // fifth card
 document.getElementById('fifth-card').addEventListener('click',function(){
-    const cardprice5 = getCardbytid('fifth-card-price');
+    const cardprice5 = getCardbyid('fifth-card-price');
     const previoustotalprice = gettotalprice('total-price');
   
     const newtotalprice = previoustotalprice + cardprice5;
@@ -103,7 +103,7 @@ document.getElementById('fifth-card').addEventListener('click',function(){
 })
 // 6th-card
 document.getElementById('sixth-card').addEventListener('click',function(){
-    const cardprice6 = getCardbytid('sixth-card-price');
+    const cardprice6 = getCardbyid('sixth-card-price');
     const previoustotalprice = gettotalprice('total-price');
   
     const newtotalprice = previoustotalprice + cardprice6;
@@ -142,8 +142,14 @@ if (couponvalue === 'SELL200'){
 const previoustotal = document.getElementById('final-price');
 const previoustotalprice = gettotalprice('total-price');
 const previousdiscountprice = gettotalprice('discount-price');
-const newtotalprice = previoustotalprice - previousdiscountprice;
-setnewtotalprice('final-price',newtotalprice.toFixed(2))
+const priceafterdiscount = previoustotalprice - previousdiscountprice;
+setnewtotalprice('final-price',priceafterdiscount.toFixed(2))
+
+})
+
+document.getElementById('go-home-btn').addEventListener('click', function(){
+
+  window.location.href = 'index.html'
 
 })
 
