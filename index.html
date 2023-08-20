@@ -32,7 +32,7 @@ font-family: 'Work Sans', sans-serif;
             </div>
         </section>
     </header>
-    <main class="bg-[#F8F8F8] max-w-6xl mx-auto mt-24 flex gap-10 ">
+    <main class="bg-[#F8F8F8] max-w-7xl mx-auto mt-24 flex gap-10 ">
         <section class="" >
             <h1 class="text-4xl font-semibold mb-5">Kitchenware</h1>
             <div class=" grid grid-cols-3 gap-10 ">
@@ -71,7 +71,7 @@ font-family: 'Work Sans', sans-serif;
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                               </div>
                               <!-- rating section -->
-                          <h2 class="card-title text-lg font-semibold">K. Accessories</h2>
+                          <h2 class="card-title text-lg font-semibold">j. Accessories</h2>
                           <p><span id="second-card-price">25.00</span> Tk</p>
                           
                         </div>
@@ -171,11 +171,14 @@ font-family: 'Work Sans', sans-serif;
         <section>
             <div class="cart-container mb-10 mt-16 bg-[#FFF] p-5">
                 <h1 class="text-xl font-medium">Have coupon?</h1>
-                <input class="border-2 " type="text" placeholder="Coupon code">
-                <button class="bg-pink-700  text-white font-semibold rounded-md px-3 py-1" disabled>Apply</button>
+                <input class="border-2 py-3 rounded-md pl-2 " type="text" placeholder="Coupon code">
+                <button id="apply-btn" class="btn btn-secondary inline-block" disabled >Apply</button>
 
             </div>
             <div class="bg-[#FFF] p-5">
+              <div id="item-name">
+
+              </div>
                 <hr>
                 <p>Total Price : <span id="total-price">00</span></p>
                 <p>Discount : 00</p>

@@ -17,3 +17,14 @@ function setnewtotalprice(totalpricedisplay,newvalue){
     totalpricefield.innerText = newvalue;
      
 }
+
+function itemName(item){
+    console.log(item);
+    
+    const itemfield = document.getElementById('item-name');
+    const count = itemfield.childElementCount;
+    const additem = document.createElement('p');
+    additem.innerText = (count + 1) + ". " + (item) ;
+    itemfield.appendChild(additem);
+}
+
