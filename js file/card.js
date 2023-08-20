@@ -7,6 +7,13 @@ document.getElementById('first-card').addEventListener('click',function(){
   setnewtotalprice('total-price',newtotalprice.toFixed(2));
 
  itemName('K. Accessories');
+//  purchase-button
+if(newtotalprice > 0){
+  document.getElementById('purchase-btn').removeAttribute('disabled')
+}else{
+  document.getElementById('purchase-btn').setAttribute('disabled',true)
+}
+ // apply-button
 if(newtotalprice >= 200){
   document.getElementById('apply-btn').removeAttribute('disabled')
 }else{
@@ -23,6 +30,13 @@ document.getElementById('second-card').addEventListener('click',function(){
   setnewtotalprice('total-price',newtotalprice.toFixed(2));
 
   itemName('j. Accessories');
+  // purchase-btn
+  if(newtotalprice > 0){
+    document.getElementById('purchase-btn').removeAttribute('disabled')
+  }else{
+    document.getElementById('purchase-btn').setAttribute('disabled',true)
+  }
+  // apply-button
   if(newtotalprice >= 200){
     document.getElementById('apply-btn').removeAttribute('disabled')
   }
@@ -36,6 +50,13 @@ document.getElementById('third-card').addEventListener('click',function(){
   setnewtotalprice('total-price',newtotalprice.toFixed(2)); 
 
   itemName('Home Cooker');
+  // purchase-btn
+  if(newtotalprice > 0){
+    document.getElementById('purchase-btn').removeAttribute('disabled')
+  }else{
+    document.getElementById('purchase-btn').setAttribute('disabled',true)
+  }
+  // apply-button
   if(newtotalprice >= 200){
     document.getElementById('apply-btn').removeAttribute('disabled')
   }
@@ -49,6 +70,13 @@ document.getElementById('fourth-card').addEventListener('click',function(){
   setnewtotalprice('total-price',newtotalprice.toFixed(2));
 
   itemName('Sports Back Cap');
+  // purchase-btn
+  if(newtotalprice > 0){
+    document.getElementById('purchase-btn').removeAttribute('disabled')
+  }else{
+    document.getElementById('purchase-btn').setAttribute('disabled',true)
+  }
+  // apply-button
   if(newtotalprice >= 200){
     document.getElementById('apply-btn').removeAttribute('disabled')
   }
@@ -62,6 +90,13 @@ document.getElementById('fifth-card').addEventListener('click',function(){
     setnewtotalprice('total-price',newtotalprice.toFixed(2));
 
     itemName('Full Jersey Set');
+    // purchase-btn
+    if(newtotalprice > 0){
+      document.getElementById('purchase-btn').removeAttribute('disabled')
+    }else{
+      document.getElementById('purchase-btn').setAttribute('disabled',true)
+    }
+    // apply-button
     if(newtotalprice >= 200){
       document.getElementById('apply-btn').removeAttribute('disabled')
     }
@@ -75,14 +110,45 @@ document.getElementById('sixth-card').addEventListener('click',function(){
     setnewtotalprice('total-price',newtotalprice.toFixed(2));
 
     itemName('Sports cates');
-
-    if(newtotalprice >= 200){
-      document.getElementById('apply-btn').removeAttribute('disabled')
+    // purchase-btn
+    if(newtotalprice > 0){
+      document.getElementById('purchase-btn').removeAttribute('disabled')
+    }else{
+      document.getElementById('purchase-btn').setAttribute('disabled',true)
     }
+// apply-button
+if(newtotalprice >= 200){
+  document.getElementById('apply-btn').removeAttribute('disabled')
+}
+    
 })
 
 // apply button
-// applybutton
+
+document.getElementById('apply-btn').addEventListener('click', function(){
+
+const couponvalue = getinputvaluebyid('coupon-input');
+const discount = document.getElementById('discount-price');
+const currenttotal = gettotalprice('total-price')
+
+if (couponvalue === 'SELL200'){
+  const discountprice = currenttotal - (currenttotal * 20 / 100);
+  const afterdiscountprice = currenttotal - discountprice;
+  setnewtotalprice('discount-price', afterdiscountprice.toFixed(2))
+} else{
+  alert('please use the right coupon')
+}
+
+const previoustotal = document.getElementById('final-price');
+const previoustotalprice = gettotalprice('total-price');
+const previousdiscountprice = gettotalprice('discount-price');
+const newtotalprice = previoustotalprice - previousdiscountprice;
+setnewtotalprice('final-price',newtotalprice.toFixed(2))
+
+})
+
+
+
 
 
 

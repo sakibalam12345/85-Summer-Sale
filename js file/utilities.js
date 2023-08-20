@@ -1,3 +1,4 @@
+
 function getCardbytid(cardid){
     const cardfield = document.getElementById(cardid);
     const cardinner = cardfield.innerText;
@@ -28,3 +29,11 @@ function itemName(item){
     itemfield.appendChild(additem);
 }
 
+function getinputvaluebyid(inputid){
+    const inputfield = document.getElementById(inputid);
+    const inputvalue = inputfield.value;
+    inputfield.value = '';
+    return inputvalue;
+    
+     
+}

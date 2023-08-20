@@ -160,18 +160,15 @@ font-family: 'Work Sans', sans-serif;
                           
                         </div>
                       </div>
-                
-
+              
                 </div>
                    
-
-            
           
         </section>
         <section>
             <div class="cart-container mb-10 mt-16 bg-[#FFF] p-5">
                 <h1 class="text-xl font-medium">Have coupon?</h1>
-                <input class="border-2 py-3 rounded-md pl-2 " type="text" placeholder="Coupon code">
+                <input id="coupon-input" class="border-2 py-3 rounded-md pl-2 " type="text" placeholder="Coupon code">
                 <button id="apply-btn" class="btn btn-secondary inline-block" disabled >Apply</button>
 
             </div>
@@ -181,10 +178,10 @@ font-family: 'Work Sans', sans-serif;
               </div>
                 <hr>
                 <p>Total Price : <span id="total-price">00</span></p>
-                <p>Discount : 00</p>
-                <p>Total : 00</p>
+                <p>Discount : <span id="discount-price">00</span> </p>
+                <p>Total : <span id="final-price">00</span> </p>
                 <hr>
-                <button class="bg-pink-700 text-white font-semibold rounded-md px-5 py-1 mt-5" disabled>Make Purchase</button>
+                <button id="purchase-btn" class="btn btn-secondary mt-5 px-16 " disabled >Make Purchase</button>
             </div>
         </section>
         
